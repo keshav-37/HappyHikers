@@ -16,7 +16,7 @@ This project was created using Node.js, Express, MongoDB, and Bootstrap. Passpor
     
     3)Functionalities of posts and comments:
         - Create, view, edit and delete posts and comments
-        -Upload photos in post from local
+        - Upload photos in post from local
         
      4) Flash messages responding to users’ interaction with the app
      
