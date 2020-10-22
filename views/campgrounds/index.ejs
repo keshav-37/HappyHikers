@@ -1,0 +1,32 @@
+<%- include("../partials/header.ejs") -%>
+
+	<div class="container">
+		<header class="jumbotron">
+			<div>
+				<h1><i class="fas fa-map-marked-alt"></i> Welcome To <i class="fas fa-suitcase-rolling"></i> HappyHikers!</h1>
+				<p>The beautiful thing about travelling is that it's truly an activity everyone can do.</p>
+				<p><a class="btn btn-new btn-lg" href="/campgrounds/new"><i class="fas fa-plus"></i> Add Your Favourite Place</a></p>
+			</div>
+			
+		</header>
+
+		<div class="row text-center">
+			<% campgrounds.forEach(function(c){ %>
+				<div class="col-md-4 col-sm-6">
+					<div class="img-thumbnail">
+						<img src="<%= c.image %>" class="img-fluid">
+						<div class="caption">
+							<h4><%= c.name %><h4>
+						</div>
+						<p>
+							<a href="/campgrounds/<%=c._id%>" class="btn  btn-view">More Info</a>	
+						</p>
+
+					</div>
+				</div>
+			<% }); %>
+		</div>
+	</div>
+
+
+<%- include("../partials/footer.ejs") -%>

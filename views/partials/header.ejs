@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>HappyHikers!</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <script src="https://kit.fontawesome.com/146b9189ea.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="/css/main.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-nav">
+      <a class="navbar-brand" href="/campgrounds"><i class="fas fa-suitcase-rolling"></i> Happy Hikers!</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarTogglerDemo02"
+        aria-controls="navbarTogglerDemo02"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div
+        class="collapse navbar-collapse float-right"
+        id="navbarTogglerDemo02"
+      >
+        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+          <% if(!currentUser){ %>
+          <li class="nav-item">
+            <a class="nav-link" href="/login"
+              ><i class="fas fa-sign-in-alt"></i> Login</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/register"
+              ><i class="fas fa-user-plus"></i> Sign-Up</a
+            >
+          </li>
+          <% }else{ %>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Hi <%= currentUser.username %></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/logout"
+              >Logout<span class="sr-only">(current)</span></a
+            >
+          </li>
+          <% } %>
+        </ul>
+      </div>
+    </nav>
+
+  <div class="container mt-3">
+    <% if(error && error.length > 0){ %>
+      <div class="alert alert-danger " role="alert">
+        <%= error %>
+      </div>
+    <% }if(success && success.length > 0){ %>
+      <div class="alert alert-success " role="alert">
+        <%= success %>
+      </div>
+    <% } %>
+  </div>
+    
+    
+    

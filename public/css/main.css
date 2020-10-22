@@ -1,0 +1,75 @@
+body {
+  background-color: #f1faee;
+}
+
+.heading {
+  color: #1d3557;
+}
+
+.img-thumbnail img {
+  width: 100%;
+}
+
+.img-thumbnail {
+  padding: 0;
+}
+
+.img-thumbnail .caption-full {
+  padding: 10px;
+}
+
+#delete-form {
+  display: inline;
+}
+
+.bg-nav {
+  background-color: #1d3557;
+  color: #f1faee;
+}
+
+.btn-bg {
+  color: #f1faee;
+  background-color: #1d3557;
+}
+
+.btn-bg:hover {
+  color: #a8dadc;
+}
+
+.btn-new {
+  color: #1d3557;
+  border-color: #1d3557;
+}
+
+.btn-new:hover {
+  color: #f1faee;
+  background-color: #1d3557;
+}
+
+.btn-view {
+  color: #f1faee;
+  background-color: #1d3557;
+}
+
+.btn-view:hover {
+  color: #a8dadc;
+  background-color: #1d3557;
+}
+
+.jumbotron {
+  background-color: #a8dadc;
+  text-align: center;
+}
+
+.btn-del,
+.btn-edit {
+  background-color: #f1faee;
+}
+
+.btn-del:hover {
+  color: #e63946;
+}
+
+.btn-edit:hover {
+  color: #457b9d;
+}
